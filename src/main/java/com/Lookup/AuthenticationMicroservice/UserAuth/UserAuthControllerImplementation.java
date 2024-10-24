@@ -21,6 +21,7 @@ public class UserAuthControllerImplementation implements UserAuthController {
         this.userAuthService = userAuthService;
     }
 
+    @Override
     @PutMapping("/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest login) throws UnvalidLogin {
         LoginResponse body = userAuthService.login(login);
